@@ -258,11 +258,61 @@
                     <connections>
                         <outlet property="personsImage" destination="tOO-eL-rx6" id="n8a-Rv-xp3"/>
                         <outlet property="tableView" destination="gEs-2e-Kgj" id="eeC-WB-PTL"/>
+                        <segue destination="uI1-hb-Ez2" kind="show" identifier="finalSegue" id="ft3-vy-uk2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aGt-NQ-sWK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1686" y="-25"/>
+        </scene>
+        <!--Edit Details-->
+        <scene sceneID="4Vm-fV-e11">
+            <objects>
+                <viewController id="uI1-hb-Ez2" customClass="LastViewController" customModule="EmployeesApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IZC-sg-GVr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Change" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yhC-cK-paS">
+                                <rect key="frame" x="20" y="208" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="GlZ-4Z-NFm"/>
+                                    <constraint firstAttribute="height" constant="40" id="KiN-TA-Ipr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zu2-Au-chq">
+                                <rect key="frame" x="146" y="288" width="122" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitButtonTapped:" destination="uI1-hb-Ez2" eventType="touchUpInside" id="w3n-LT-Gnu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qIB-QE-gw8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yhC-cK-paS" firstAttribute="top" secondItem="qIB-QE-gw8" secondAttribute="top" constant="120" id="HUZ-PH-bi6"/>
+                            <constraint firstItem="yhC-cK-paS" firstAttribute="leading" secondItem="qIB-QE-gw8" secondAttribute="leading" constant="20" id="M8b-Bt-2ux"/>
+                            <constraint firstItem="Zu2-Au-chq" firstAttribute="leading" secondItem="qIB-QE-gw8" secondAttribute="leading" constant="146" id="WzP-K5-1vb"/>
+                            <constraint firstItem="qIB-QE-gw8" firstAttribute="trailing" secondItem="yhC-cK-paS" secondAttribute="trailing" constant="20" id="b27-fd-bke"/>
+                            <constraint firstItem="Zu2-Au-chq" firstAttribute="top" secondItem="yhC-cK-paS" secondAttribute="bottom" constant="40" id="hcx-DT-4DY"/>
+                            <constraint firstItem="qIB-QE-gw8" firstAttribute="trailing" secondItem="Zu2-Au-chq" secondAttribute="trailing" constant="146" id="uUH-mC-afI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Edit Details" id="rCq-zb-DsP"/>
+                    <connections>
+                        <outlet property="editdataTextField" destination="yhC-cK-paS" id="UyD-tG-N4t"/>
+                        <outlet property="submitButton" destination="Zu2-Au-chq" id="8b8-tx-XeI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zOl-uv-H4E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2469.5652173913045" y="-25.446428571428569"/>
         </scene>
     </scenes>
     <resources>

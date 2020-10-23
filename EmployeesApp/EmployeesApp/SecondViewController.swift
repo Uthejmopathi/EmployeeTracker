@@ -7,7 +7,15 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class SecondViewController: UIViewController, EditedValue {
+    func dataIsChangedTo(newData: String) {
+        changedData = newData
+        nameFromFirstPage = newData
+        tableView.reloadData()
+        
+    }
+    var changedData : String?
+    
     @IBOutlet weak var personsImage: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     
@@ -16,7 +24,7 @@ class SecondViewController: UIViewController {
     var descriptionFromFirstPage : String?
     var emailIDFromFirstPage: String?
     var phoneNumberFromFirstPage: Int?
-    
+    var indexValue = 0
     var leftLabelsData = ["Name","Description","Email","Phone"]
     
     override func viewDidLoad() {
@@ -25,6 +33,7 @@ class SecondViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
     
 
 }
@@ -68,6 +77,12 @@ extension SecondViewController: UITableViewDelegate, UITableViewDataSource{
 
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        indexValue = indexPath.section
+        print(indexValue)
+        performSegue(withIdentifier: "finalSegue", sender: nil)
+    }
+    
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
         case 0:
@@ -79,6 +94,11 @@ extension SecondViewController: UITableViewDelegate, UITableViewDataSource{
         default:
             return "Phone"
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as? LastViewController
+        destinationVC?.editingDetailDelegate = self
     }
     
     

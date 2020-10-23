@@ -17,6 +17,7 @@
 		61E34980253F7A340015E2DF /* EmployeesAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E3497F253F7A340015E2DF /* EmployeesAppUITests.swift */; };
 		61E34991253F88020015E2DF /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E34990253F88020015E2DF /* SecondViewController.swift */; };
 		61E34996253F9A6C0015E2DF /* LoginPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E34995253F9A6C0015E2DF /* LoginPageViewController.swift */; };
+		61E349A4253FA9370015E2DF /* LastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E349A3253FA9370015E2DF /* LastViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		61E34981253F7A340015E2DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61E34990253F88020015E2DF /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		61E34995253F9A6C0015E2DF /* LoginPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewController.swift; sourceTree = "<group>"; };
+		61E349A3253FA9370015E2DF /* LastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 		61E34951253F7A300015E2DF = {
 			isa = PBXGroup;
 			children = (
+				61E349A3253FA9370015E2DF /* LastViewController.swift */,
 				61E3495C253F7A300015E2DF /* EmployeesApp */,
 				61E34973253F7A340015E2DF /* EmployeesAppTests */,
 				61E3497E253F7A340015E2DF /* EmployeesAppUITests */,
@@ -268,6 +271,7 @@
 				61E34962253F7A300015E2DF /* ViewController.swift in Sources */,
 				61E3495E253F7A300015E2DF /* AppDelegate.swift in Sources */,
 				61E34996253F9A6C0015E2DF /* LoginPageViewController.swift in Sources */,
+				61E349A4253FA9370015E2DF /* LastViewController.swift in Sources */,
 				61E34960253F7A300015E2DF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
