@@ -195,7 +195,7 @@
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="gEs-2e-Kgj">
-                                <rect key="frame" x="0.0" y="276" width="414" height="586"/>
+                                <rect key="frame" x="0.0" y="276" width="414" height="526"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SecondPageCells" rowHeight="59" id="Dud-T8-GfW" customClass="SecondTableViewCell" customModule="EmployeesApp" customModuleProvider="target">
@@ -241,28 +241,43 @@
                                     <outlet property="delegate" destination="oR9-ZO-51a" id="wqn-Jy-3Oq"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tlN-kG-RDD">
+                                <rect key="frame" x="136" y="807" width="143" height="47"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Log Out">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoutButtonTapped:" destination="oR9-ZO-51a" eventType="touchUpInside" id="ecx-Qg-0BU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="duN-gr-Ug6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="tlN-kG-RDD" firstAttribute="leading" secondItem="duN-gr-Ug6" secondAttribute="leading" constant="136" id="OBk-eL-ctS"/>
                             <constraint firstItem="gEs-2e-Kgj" firstAttribute="leading" secondItem="duN-gr-Ug6" secondAttribute="leading" id="OWt-zC-3YN"/>
                             <constraint firstItem="duN-gr-Ug6" firstAttribute="trailing" secondItem="tOO-eL-rx6" secondAttribute="trailing" constant="87" id="RdQ-VF-0DA"/>
-                            <constraint firstItem="duN-gr-Ug6" firstAttribute="bottom" secondItem="gEs-2e-Kgj" secondAttribute="bottom" id="SFs-ze-0HZ"/>
+                            <constraint firstItem="duN-gr-Ug6" firstAttribute="bottom" secondItem="gEs-2e-Kgj" secondAttribute="bottom" constant="60" id="SFs-ze-0HZ"/>
+                            <constraint firstItem="tlN-kG-RDD" firstAttribute="top" secondItem="gEs-2e-Kgj" secondAttribute="bottom" constant="5" id="Y1J-KQ-2Ju"/>
                             <constraint firstItem="tOO-eL-rx6" firstAttribute="leading" secondItem="duN-gr-Ug6" secondAttribute="leading" constant="87" id="a9u-ax-wdf"/>
+                            <constraint firstItem="duN-gr-Ug6" firstAttribute="trailing" secondItem="tlN-kG-RDD" secondAttribute="trailing" constant="135" id="dH0-kO-QWp"/>
                             <constraint firstItem="tOO-eL-rx6" firstAttribute="top" secondItem="duN-gr-Ug6" secondAttribute="top" constant="30" id="dTE-4V-Mvy"/>
+                            <constraint firstItem="duN-gr-Ug6" firstAttribute="bottom" secondItem="tlN-kG-RDD" secondAttribute="bottom" constant="8" id="ggi-5g-g0G"/>
                             <constraint firstItem="duN-gr-Ug6" firstAttribute="trailing" secondItem="gEs-2e-Kgj" secondAttribute="trailing" id="jsm-vh-gah"/>
                             <constraint firstItem="gEs-2e-Kgj" firstAttribute="top" secondItem="tOO-eL-rx6" secondAttribute="bottom" constant="30" id="zBS-FY-FGL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Details" id="41v-Oa-pKX"/>
                     <connections>
+                        <outlet property="logoutButton" destination="tlN-kG-RDD" id="O4r-Oi-nhb"/>
                         <outlet property="personsImage" destination="tOO-eL-rx6" id="n8a-Rv-xp3"/>
                         <outlet property="tableView" destination="gEs-2e-Kgj" id="eeC-WB-PTL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aGt-NQ-sWK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1686" y="-25"/>
+            <point key="canvasLocation" x="1685.5072463768117" y="-25.446428571428569"/>
         </scene>
     </scenes>
     <resources>

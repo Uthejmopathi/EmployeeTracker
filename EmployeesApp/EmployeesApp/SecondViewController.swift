@@ -11,6 +11,7 @@ class SecondViewController: UIViewController {
     
     @IBOutlet weak var personsImage: UIImageView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var logoutButton: UIButton!
     
     var details: Details?
     
@@ -19,6 +20,10 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         personsImage.image = UIImage(named: "ronaldo")
+    }
+    
+    @IBAction func logoutButtonTapped(_ sender: Any) {
+        _ = navigationController?.popToRootViewController(animated: true)
     }
 }
 
