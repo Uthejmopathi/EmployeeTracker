@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: Structure Defined Below
 struct Details {
     var name: String
     var dob: String
@@ -17,16 +18,17 @@ struct Details {
     var econtact: Int
 }
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+// MARK: ViewController Class
+class ViewController: UIViewController, UITableViewDelegate {
     
+// MARK: IBOutlets
     @IBOutlet weak var tableView: UITableView!
-    
+   
+// MARK: Variables Definitions and Initializations
     var recievedUserName: String?
-    
     var userData: [String] = ["Name", "Email"]
     var managerData: [String] = ["Name", "Email", "Phone", "Date Of Birth"]
     var ceoData: [String] = ["Name", "Email", "Phone", "Date Of Birth", "Emergency Contact"]
-    
     var indexValue = 0
     var contactDetails: [Details?] = [Details(name: "Ashley",
                                               dob: "08-27-1995",
@@ -270,10 +272,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                                               role: "Manager of External Affairs", econtact: 5305375186)]
     
     
+// MARK: ViewDidLoad Function
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
+}
+
+// MARK: TableViewDataSource Extension for tableView
+extension ViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         contactDetails.count
@@ -309,8 +315,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 }
 
 
+// MARK: Cell Class of First Table name tableView
 class TableViewCell: UITableViewCell{
     static let identifier = "FirstPageTableCells"
+    
+// MARK: IBOutlets for components in Cell
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var personImage: UIImageView!

@@ -7,26 +7,30 @@
 
 import UIKit
 
+// MARK: SecondViewController Class
 class SecondViewController: UIViewController {
     
+// MARK: IBOutelts
     @IBOutlet weak var personsImage: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var logoutButton: UIButton!
     
+// MARK: Variable Declarations and Initializations
     var details: Details?
-    
     var leftLabelsData: [String]?
     
+// MARK: ViewDidLoad Function
     override func viewDidLoad() {
         super.viewDidLoad()
         personsImage.image = UIImage(named: "ronaldo")
     }
-    
+// MARK: Action to be performed when Logout Button Tapped
     @IBAction func logoutButtonTapped(_ sender: Any) {
         _ = navigationController?.popToRootViewController(animated: true)
     }
 }
 
+// MARK: Extensions for tableView in SecondViewController
 extension SecondViewController: UITableViewDelegate, UITableViewDataSource{
     func numberOfSections(in tableView: UITableView) -> Int {
         leftLabelsData!.count
@@ -63,7 +67,6 @@ extension SecondViewController: UITableViewDelegate, UITableViewDataSource{
             cell?.leftLabel.text = leftLabelsData![4]
             return cell!
         }
-
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -80,12 +83,15 @@ extension SecondViewController: UITableViewDelegate, UITableViewDataSource{
             return leftLabelsData![4]
         }
     }
-    
-    
 }
 
+// MARK: Class for cells in tableView of SecondViewController
 class SecondTableViewCell: UITableViewCell{
+    
+// MARK: Identifier for Cell
     static let identifier = "SecondPageCells"
+    
+// MARK: IBOutlets for components in Cell
     @IBOutlet weak var leftLabel: UILabel!
     @IBOutlet weak var rightLabel: UILabel!
 }
