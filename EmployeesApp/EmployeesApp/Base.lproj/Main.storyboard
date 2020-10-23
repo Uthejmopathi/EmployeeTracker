@@ -205,17 +205,17 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="59"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="7KQ-RV-vXF">
-                                                    <rect key="frame" x="10" y="6" width="394" height="48"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="7KQ-RV-vXF">
+                                                    <rect key="frame" x="17" y="6" width="387" height="48"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upF-ce-jNW">
-                                                            <rect key="frame" x="0.0" y="0.0" width="197" height="48"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="193.5" height="48"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ndx-jP-PLZ">
-                                                            <rect key="frame" x="197" y="0.0" width="197" height="48"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ndx-jP-PLZ">
+                                                            <rect key="frame" x="193.5" y="0.0" width="193.5" height="48"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -226,7 +226,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="7KQ-RV-vXF" secondAttribute="bottom" constant="5" id="KFi-zg-EWp"/>
                                                 <constraint firstItem="7KQ-RV-vXF" firstAttribute="top" secondItem="Zxt-rm-zqp" secondAttribute="top" constant="6" id="O1c-mg-JXB"/>
-                                                <constraint firstItem="7KQ-RV-vXF" firstAttribute="leading" secondItem="Zxt-rm-zqp" secondAttribute="leading" constant="10" id="bKj-56-c8t"/>
+                                                <constraint firstItem="7KQ-RV-vXF" firstAttribute="leading" secondItem="Zxt-rm-zqp" secondAttribute="leading" constant="17" id="ozh-Jb-BB0"/>
                                                 <constraint firstAttribute="trailing" secondItem="7KQ-RV-vXF" secondAttribute="trailing" constant="10" id="yVv-bF-wzN"/>
                                             </constraints>
                                         </tableViewCellContentView>

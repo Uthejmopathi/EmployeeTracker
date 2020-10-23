@@ -9,61 +9,69 @@ import UIKit
 
 struct Details {
     var name: String
-    var description: String
+    var dob: String
     var contactImage: String
     var emailID: String
     var phoneNumber: Int
+    var role: String
 }
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-   
+    
     @IBOutlet weak var tableView: UITableView!
     
     var recievedUserName: String?
     
+    var userData: [String] = ["Name", "Email"]
+    var managerData: [String] = ["Name", "Email", "Phone", "Date Of Birth"]
+    var ceoData: [String] = ["Name", "Email", "Phone", "Date Of Birth", "Emergency Contacts"]
+    
     var indexValue = 0
     var contactDetails: [Details?] = [Details(name: "Ashley",
-                                              description: "iOS Developer",
+                                              dob: "08-27-1995",
                                               contactImage: "ronaldo",
                                               emailID: "ashley@gmail.com",
-                                              phoneNumber: 1234567891),
+                                              phoneNumber: 1234567891,
+                                              role: "iOS Developer"),
                                       Details(name: "Brian",
-                                              description: "Full Stack Developer",
+                                              dob: "08-27-1995",
                                               contactImage: "ronaldo",
                                               emailID: "brian@gmail.com",
-                                              phoneNumber: 1234567892),
+                                              phoneNumber: 1234567892,
+                                              role: "Data Analyst"),
                                       Details(name: "Charlie",
-                                              description: "UI Designer",
+                                              dob: "08-27-1995",
                                               contactImage: "ronaldo",
                                               emailID: "charlie@gmail.com",
-                                              phoneNumber: 1234567893),
+                                              phoneNumber: 1234567893,
+                                              role: "Java Developer"),
                                       Details(name: "TJ",
-                                              description: "Senior iOS Developer",
+                                              dob: "07-11-1996",
                                               contactImage: "ronaldo",
                                               emailID: "tj@gmail.com",
-                                              phoneNumber: 1234567894),
+                                              phoneNumber: 1234567894,
+                                              role: "QA Engineer"),
                                       Details(name: "Kerry",
-                                              description: "Data Analyst",
+                                              dob: "08-27-1995",
                                               contactImage: "ronaldo",
                                               emailID: "kerry@gmail.com",
-                                              phoneNumber: 1234567895)]
+                                              phoneNumber: 1234567895,
+                                              role: "Technical Lead")]
     
     
-        override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
-            print(recievedUserName)
-        // Do any additional setup after loading the view.
     }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        5
+        contactDetails.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.identifier, for: indexPath) as? TableViewCell
         cell?.nameLabel.text = contactDetails[indexPath.row]?.name
-        cell?.descriptionLabel.text = contactDetails[indexPath.row]?.description
+        cell?.descriptionLabel.text = contactDetails[indexPath.row]?.role
         cell?.personImage.image = UIImage(named: contactDetails[indexPath.row]!.contactImage)
         return cell!
     }
@@ -73,11 +81,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destinationVC = segue.destination as? SecondViewController
-        destinationVC?.nameFromFirstPage = contactDetails[indexValue]?.name
-        destinationVC?.imageFromFirstPage = contactDetails[indexValue]?.contactImage
-        destinationVC?.descriptionFromFirstPage = contactDetails[indexValue]?.description
-        destinationVC?.emailIDFromFirstPage = contactDetails[indexValue]?.emailID
-        destinationVC?.phoneNumberFromFirstPage = contactDetails[indexValue]?.phoneNumber
+        
+        if recievedUserName == "abc" {
+            destinationVC?.details = contactDetails[indexValue]
+            destinationVC?.leftLabelsData = userData
+        }
+        else if recievedUserName == "pqr" {
+            destinationVC?.details = contactDetails[indexValue]
+            destinationVC?.leftLabelsData = managerData
+        }
+        else {
+            destinationVC?.details = contactDetails[indexValue]
+            destinationVC?.leftLabelsData = ceoData
+        }
     }
 }
 
