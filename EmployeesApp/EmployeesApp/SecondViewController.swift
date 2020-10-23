@@ -54,7 +54,7 @@ extension SecondViewController: UITableViewDelegate, UITableViewDataSource{
             return cell!
             }
         else{
-            cell?.rightLabel.text = details?.role
+            cell?.rightLabel.text = String(details!.econtact)
             cell?.leftLabel.text = leftLabelsData![4]
             return cell!
         }
